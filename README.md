@@ -48,8 +48,7 @@ FULL ADDER
 FULL SUBTRACTOR
 
 
-![Screenshot 2024-12-05 204511](https://github.com/user-attachments/assets/cdf6d331-3d0a-4df6-a7a0-02d8e1e60017)
-
+![Screenshot 2024-12-07 110606](https://github.com/user-attachments/assets/f6234e3d-3cc0-411c-8738-8bdccde6d0c4)
 
 
 **Procedure**
@@ -66,43 +65,33 @@ Developed by: KESHAVARTHINI B    RegisterNumber:24900033
 FULL ADDER
 
 
-module full_adder(a,b,c,sum,carry);
 
-input a,b,c;
+module full_add(a,b,c,sum,carry);
 
 output sum,carry;
 
-wire w1,w2,w3;
+input a,b,c;
 
-assign sum=(a^b)^c;
+assign sum=a^b^c;
 
-assign w1=a&b;
-
-assign w2=b&c;
-
-assign w3=c&b;
-
-assign carry=w1|w2|w3;
+assign carry=(a&b)|(b&c)|(a&c);
 
 endmodule
+
 
 
 FULL SUBTRACTOR
 
 
-module half_subtractor(a,b,bin,diff,borrow);
-
-input a,b,bin;
+module full_sub(a,b,c,diff,borrow);
 
 output diff,borrow;
 
-wire c;
+input a,b,c;
 
-assign c=~a;
+assign diff=a^b^c;
 
-assign diff=a^b^bin;
-
-assign borrow=(c&b)|(b&bin)|(bin&c);
+assign borrow=(~a&c)|(~a&b)|(b&c);
 
 endmodule
 
@@ -113,13 +102,13 @@ endmodule
 FULL ADDER
 
 
-![Screenshot (41)](https://github.com/user-attachments/assets/e7bb0b4a-a224-430a-9cf5-8bf1770a9d98)
+![Screenshot (47)](https://github.com/user-attachments/assets/1e139f76-38c6-457b-a321-977cbe2a0a16)
 
 
 FULL SUBTRACTOR
 
 
-![Screenshot (43)](https://github.com/user-attachments/assets/5d8fda80-e3e4-4b95-b330-aeff68a18c70)
+![Screenshot (50)](https://github.com/user-attachments/assets/f9d908d6-96d5-4cb8-91c8-569304ed06d0)
 
 
 
@@ -128,15 +117,14 @@ FULL SUBTRACTOR
 
 FULL ADDER
 
-
-![Screenshot (42)](https://github.com/user-attachments/assets/d1bc1d20-d1f1-4fcc-85fb-e0f9caee1681)
+![Screenshot (48)](https://github.com/user-attachments/assets/7755fdf3-24a5-46b3-92ea-4929c07699e7)
 
 
 
 FULL SUBTRACTOR
 
 
-![Screenshot (44)](https://github.com/user-attachments/assets/424e556e-5a3e-47ea-9dfa-301c71557730)
+![Screenshot (49)](https://github.com/user-attachments/assets/50be4df2-b1d0-4268-8255-cad0259cdfcc)
 
 
 **Result:**
